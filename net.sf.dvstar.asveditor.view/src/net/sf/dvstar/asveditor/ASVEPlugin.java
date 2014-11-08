@@ -1,16 +1,13 @@
 package net.sf.dvstar.asveditor;
 
-import org.eclipse.core.runtime.Path;
+import java.text.MessageFormat;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.plugin.*;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.MessageFormat;
-import java.util.*;
 
 
 /**
@@ -39,6 +36,7 @@ public class ASVEPlugin extends AbstractUIPlugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
+		//Locale.setDefault(new Locale("en"));
         resourceBundle = Platform.getResourceBundle(getBundle());
 		plugin = this;
 /*		
