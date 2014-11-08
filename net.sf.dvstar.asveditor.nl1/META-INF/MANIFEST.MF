@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: net.sf.dvstar.asveditor.nl1 Fragment
+Bundle-SymbolicName: net.sf.dvstar.asveditor.nl1
+Bundle-Version: 1.0.0
+Fragment-Host: net.sf.dvstar.asveditor.view;bundle-version="[1.0.0,1.1.0)"

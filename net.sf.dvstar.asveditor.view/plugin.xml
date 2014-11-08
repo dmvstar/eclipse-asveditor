@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<!--	
+
+	PLUGIN_ID org.eclipse.ui.
+	<extension point="org.eclipse.ui.menus.openWith">
+		<insertionPoint name="group.openWith"/>
+		<group id="group.openWith"/>
+		locationURI="popup:openWith"
+		locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?after=openWith"
+		<menuContribution locationURI="popup:openWith">
+			<command commandId="net.sf.dvstar.asveditor.load" label="%command.label" style="push">	</command>
+		</menuContribution>
+		
+	</extension>
+	org.eclipse.ui.OpenWithMenu
+-->		
+
+	<extension point="org.eclipse.ui.menus">
+	
+		<menuContribution locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?after=org.eclipse.ui.OpenWithMenu">
+			<command commandId="net.sf.dvstar.asveditor.load" label="%command.label" style="push"/>
+		</menuContribution>
+		
+	</extension>
+
+
+	<extension point="org.eclipse.ui.menus">
+	
+		<menuContribution locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+			<command commandId="net.sf.dvstar.asveditor.load" label="%command.label" style="push"/>
+		</menuContribution>
+		
+	</extension>
+
+	<extension point="org.eclipse.ui.commands">
+		<command defaultHandler="net.sf.dvstar.asveditor.handler.LoadHandler"
+      id="net.sf.dvstar.asveditor.load" name="%command.name">
+		</command>
+	</extension>
+
+	<extension
+         point="org.eclipse.ui.views">
+		<category
+            name="%category.name"
+            id="net.sf.dvstar.asveditor">
+		</category>
+		<view
+            name="%view.name"
+            icon="icons/babelfish.png"
+            category="net.sf.dvstar.asveditor"
+            class="net.sf.dvstar.asveditor.views.ASVEditView"
+            id="net.sf.dvstar.asveditor.views.ASVEditView">
+		</view>
+	</extension>
+
+	<extension
+         point="org.eclipse.ui.perspectiveExtensions">
+		<perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+			<view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="net.sf.dvstar.asveditor.views.ASVEditView">
+			</view>
+		</perspectiveExtension>
+	</extension>
+	<extension
+         point="org.eclipse.help.contexts">
+		<contexts
+            file="contexts.xml">
+		</contexts>
+	</extension>
+	<extension
+         point="org.eclipse.ui.preferencePages">
+		<page
+            class="net.sf.dvstar.asveditor.preferences.page.preferencepage.CommonPreferences"
+            id="net.sf.dvstar.asveditor.commonpref"
+            name="%page.name">
+		</page>
+	</extension>
+	
+ 	<extension
+       point="org.eclipse.core.runtime.preferences">
+ 	</extension>
+
+</plugin>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sf.dvstar.asveditor.feature"
+      label="asveditor"
+      version="1.0.0.qualifier"
+      provider-name="dvstar">
+
+   <description url="http://stardust.in.ua/asve/description">
+      Android string property values editor
+   </description>
+
+   <copyright url="http://stardust.in.ua/asve/copyright">
+      GPL V.3
+   </copyright>
+
+   <license url="http://stardust.in.ua/asve/license">
+      GPL V.3
+   </license>
+
+   <url>
+      <discovery label="Main project site" url="http://stardust.in.ua/asve"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources" version="3.8.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions" version="3.4.401" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="net.sf.dvstar.asveditor.view"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

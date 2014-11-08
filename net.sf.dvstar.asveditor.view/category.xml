@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <category-def name="net.sf.dvstar.asveditor" label="asveditor">
+      <description>
+         Android strings property values editor
+      </description>
+   </category-def>
+</site>
