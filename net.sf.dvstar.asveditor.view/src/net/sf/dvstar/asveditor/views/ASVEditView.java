@@ -889,7 +889,7 @@ public class ASVEditView extends ViewPart {
 
 		}
 		if (result == null) {
-			showMessage("File name is empty !");
+			showMessage(ASVEPlugin.getString("messages.loader.main.empty"));
 		}
 
 		if (result != null) {
@@ -930,7 +930,7 @@ public class ASVEditView extends ViewPart {
 				refresh();
 				mLoadedFiles |= vMode;
 			} else {
-				showMessage("File not exists " + result);
+				showMessage(ASVEPlugin.getString("messages.loader.main.notexist") + result);
 			}
 		}
 
