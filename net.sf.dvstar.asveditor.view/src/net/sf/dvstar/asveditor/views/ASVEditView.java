@@ -215,7 +215,7 @@ public class ASVEditView extends ViewPart {
 					mNewResourceEntryValues = false;
 					btnNewValue.setText(ASVEPlugin.getString("button.new.text",
 							"New"));
-					//setLastEditResourceEntry();
+					// setLastEditResourceEntry();
 				} else {
 					ISelection selection = mViewerTableResource.getSelection();
 					Object obj = ((IStructuredSelection) selection)
@@ -457,6 +457,12 @@ public class ASVEditView extends ViewPart {
 		if (newValue != null && oldValue != null) {
 			if (oldValue.getValueKey().equals(newValue.getValueKey())) {
 				if (oldValue.getEnfryHashCode() != newValue.getEnfryHashCode()) {
+					changed = mResourceLoader.getChangedResourceEntryValues().get(newValue.getValueKey());
+					if(changed != null){
+						changed.newValue = newValue;
+					} else {
+						changed = new ChangedResourceEntry(selected, oldValue, newValue);
+					}
 					mResourceLoader.getChangedResourceEntryValues().put(
 							newValue.getValueKey(), changed);
 					mResourceLoader.getValuesList().set(selected, newValue);
@@ -859,7 +865,7 @@ public class ASVEditView extends ViewPart {
 		case ResourceLoader.MODE_XML_SLAVE: {
 			message = "Load Slave XML resource file executed";
 			if ((mLoadedFiles & ResourceLoader.MODE_XML_MAIN) == 0) {
-				showMessage("Main File not loaded !");
+				showMessage(ASVEPlugin.getString("messages.loader.main.notloaded"));
 				result = null;
 				vMode = ResourceLoader.MODE_XML_MAIN;
 			}
