@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+   <description name="Eclipse Android String values Editor plugin for Eclipse">
+      Eclipse plugin for editing Android strings.xml resource strings. Lets you manage all localized string.xml files in one screen.
+   </description>
    <feature url="features/net.sf.dvstar.asveditor.feature_1.0.0.201411131057.jar" id="net.sf.dvstar.asveditor.feature" version="1.0.0.201411131057"/>
+   <category-def name="net.sf.dvstar.asveditor" label="Android String values Editor">
+      <description>
+       Eclipse plugin for editing Android strings.xml resource strings. Lets you manage all localized string.xml files in one screen.
+      </description>
+   </category-def>
 </site>
