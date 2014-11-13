@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/net.sf.dvstar.asveditor.feature_1.0.0.qualifier.jar" id="net.sf.dvstar.asveditor.feature" version="1.0.0.qualifier" patch="true"/>
+   <feature url="features/net.sf.dvstar.asveditor.feature_1.0.0.201411131057.jar" id="net.sf.dvstar.asveditor.feature" version="1.0.0.201411131057"/>
 </site>
