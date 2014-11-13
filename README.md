@@ -23,8 +23,7 @@ How to install
 Create a new update site in Eclipse with the following:
 
 * Site name:  ``Android String values Editor``
-* Site URL:   ``https://github.com/dmvstar/eclipse-asveditor/tree/master/net.sf.dvstar.asveditor.site/site.xml``
-
+* Site URL:   ``https://rawgit.com/dmvstar/eclipse-asveditor/master/net.sf.dvstar.asveditor.site/site.xml``
 
 **Manual Install:**
 
